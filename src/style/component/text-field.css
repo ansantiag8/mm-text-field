@@ -1,0 +1,47 @@
+@import "../settings/vars";
+
+.mm-text-field {
+  color: var(--secondaryText);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  position: relative;
+
+  & input {
+    border: none;
+    border-bottom: 1px solid var(--borderLine);
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 63px;
+    padding: 38px 0 8px;
+  }
+
+  &:hover input {
+    border-bottom: 2px solid var(--borderLine);
+    padding-bottom: 7px;
+  }
+
+  &:hover input:focus {
+  color: var(--primaryText)
+  }
+
+
+  & label {
+    position: absolute;
+    top: 37px;
+  }
+
+  & input:focus + label {
+    color: var(--colorTextFieldFocus);
+    font-size: 12px;
+    top: 18px;
+  }
+
+  & span {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+}
+
+/* TODO: Text field input */

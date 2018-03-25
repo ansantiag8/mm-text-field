@@ -1,3 +1,4 @@
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const common = require('./webpack.common.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
@@ -18,6 +19,7 @@ module.exports = merge(common, {
   },
   // TODO: limpiar carpeta
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin('./[name].css'),
     new UglifyJSPlugin({
       sourceMap: true,

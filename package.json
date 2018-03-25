@@ -1,26 +1,23 @@
 {
-  "name": "text-field",
-  "version": "0.0.1",
+  "author": "Santiago Rodriguez",
   "description": "Componente de campo de texto con diseño material",
   "main": "index.js",
+  "name": "text-field",
+  "version": "0.0.1",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Santiago Rodriguez",
-  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/santiag8/text-field.git"
+    "url": "git+ssh://git@github.com/santiag8/mm-text-field.git"
   },
-  "keywords": [
-    "text-field"
-  ],
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/santiag8/text-field/issues"
+    "url": "https://github.com/santiag8/mm-text-field/issues"
   },
-  "homepage": "https://github.com/santiag8/text-field#readme",
+  "homepage": "https://github.com/santiag8/mm-text-field#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.10",
@@ -30,11 +27,13 @@
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.1",
     "style-loader": "^0.20.2",
-    "sugarss": "^1.0.1",
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^3.11.0",
     "webpack-cli": "^2.0.9",
     "webpack-dev-server": "^3.0.0",
     "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "mm-animations": "git+ssh://git@github.com/santiag8/mm-animations.git"
   }
 }

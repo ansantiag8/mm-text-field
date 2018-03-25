@@ -7,7 +7,7 @@
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   position: relative;
-
+  /* TODO: correccion de linter para entrelazado (nested) */
   & input {
     border: none;
     border-bottom: 1px solid var(--borderLine);
@@ -23,19 +23,21 @@
   }
 
   &:hover input:focus {
-  color: var(--primaryText)
+    color: var(--primaryText)
   }
 
-
   & label {
+    @apply --animation-standard;
+
     position: absolute;
     top: 37px;
+    transform-origin: left top;
   }
 
   & input:focus + label {
     color: var(--colorTextFieldFocus);
-    font-size: 12px;
-    top: 18px;
+
+    transform: translateY(-100%) scale(0.75);
   }
 
   & span {

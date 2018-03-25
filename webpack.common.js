@@ -5,7 +5,7 @@ module.exports = {
     app: './src/text-field.js',
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'text-field.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
   },

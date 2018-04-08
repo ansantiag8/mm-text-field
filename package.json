@@ -34,6 +34,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "mm-animations": "git+ssh://git@github.com/santiag8/mm-animations.git"
+    "mm-animations": "git+ssh://git@github.com/santiag8/mm-animations.git",
+    "mm-layout": "git+ssh://git@github.com/santiag8/mm-layout.git"
   }
 }

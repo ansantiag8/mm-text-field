@@ -1,2 +1,3 @@
-@import 'mm-animations/src/style/animations.css';
+@import 'mm-animations/src/style/animations';
+@import 'mm-layout/src/style/mm-layout';
 @import "./component/text-field";

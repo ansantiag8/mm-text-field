@@ -27,14 +27,15 @@
   }
 
   & label {
-    @apply --animation-standard;
+    @apply --animation-standard-mobile;
 
     position: absolute;
     top: 37px;
     transform-origin: left top;
   }
 
-  & input:focus + label {
+  & input:focus + label,
+  & .mm-input-not-empty + label {
     color: var(--colorTextFieldFocus);
 
     transform: translateY(-100%) scale(0.75);
@@ -46,4 +47,18 @@
   }
 }
 
-/* TODO: Text field input */
+@media (--breakpoint-landscape-small-2) {
+  .mm-text-field {
+    & label {
+      @apply --animation-standard-tablet;
+    }
+  }
+}
+
+@media (--breakpoint-landscape-medium-2) {
+  .mm-text-field {
+    & label {
+      @apply --animation-standard-desktop;
+    }
+  }
+}

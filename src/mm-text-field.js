@@ -3,7 +3,7 @@ import './styles/mm-text-field.css';
 
 // TODO: pendiente al cargar el componente, validar que este diligenciada informacion
 
-const mmTextField = (function textField() {
+const mmTextField = function textField() {
   const eventChange = (nodeHtml) => {
     const input = nodeHtml.children[0];
 
@@ -25,6 +25,6 @@ const mmTextField = (function textField() {
   };
 
   constructor();
-}());
+};
 
-module.export = { mmTextField };
+export default mmTextField;

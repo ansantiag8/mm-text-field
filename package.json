@@ -1,7 +1,7 @@
 {
   "author": "Santiago Rodriguez",
   "description": "Componente de campo de texto con diseño material",
-  "main": "index.js",
+  "main": "./src/mm-text-field.js",
   "name": "mm-text-field",
   "version": "0.0.1",
   "scripts": {

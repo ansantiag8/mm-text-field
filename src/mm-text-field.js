@@ -1,9 +1,9 @@
 import 'mm-animations';
-import './style/text-field.css';
+import './styles/mm-text-field.css';
 
 // TODO: pendiente al cargar el componente, validar que este diligenciada informacion
 
-function textField() {
+const mmTextField = (function textField() {
   const eventChange = (nodeHtml) => {
     const input = nodeHtml.children[0];
 
@@ -25,8 +25,6 @@ function textField() {
   };
 
   constructor();
-}
+}());
 
-textField();
-
-module.export = { textField };
+module.export = { mmTextField };

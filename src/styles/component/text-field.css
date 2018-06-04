@@ -28,7 +28,7 @@
   }
 
   & label {
-    @apply --animation-standard-mobile;
+    @apply --mm-animation-standard-small-area;
 
     position: absolute;
     top: 37px;
@@ -54,17 +54,7 @@
 }
 
 @media (--breakpoint-landscape-small-2) {
-  .mm-text-field {
-    & label {
-      @apply --animation-standard-tablet;
-    }
-  }
 }
 
 @media (--breakpoint-landscape-medium-2) {
-  .mm-text-field {
-    & label {
-      @apply --animation-standard-desktop;
-    }
-  }
 }

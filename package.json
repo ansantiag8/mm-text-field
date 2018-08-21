@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "mm-animations": "git+ssh://git@github.com/santiag8/mm-animations.git",
-    "mm-layout": "git+ssh://git@github.com/santiag8/mm-layout.git"
+    "mm-layout": "git+ssh://git@github.com/santiag8/mm-layout.git",
+    "mm-theme": "git+ssh://git@github.com/ansantiag8/mm-theme.git"
   }
 }

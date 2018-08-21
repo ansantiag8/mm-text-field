@@ -1,11 +1,2 @@
 :root {
-  --borderLine: rgba(0, 0, 0, .42);
-  --borderLineHover: rgba(0, 0, 0, .87);
-  --colorTextFieldFocus: rgba(255, 0, 0, .87);
-  /* para los textos con focus se pide A700 */
-  --primaryColor: red;
-
-  --primaryText: rgba(0, 0, 0, .87);
-  --secondaryText: rgba(0, 0, 0, .54);
-  --disabledText: rgba(0, 0, 0, .54);
 }

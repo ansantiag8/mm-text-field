@@ -1,54 +1,75 @@
 @import "../settings/vars";
 
+/* TODO: correccion de linter para entrelazado (nested) */
 .mm-text-field {
-  color: var(--secondaryText);
+  color: var(--primary-light-color);
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; /*Pendiente si manejamos solo uno global*/
   font-size: 16px;
   position: relative;
-  /* TODO: correccion de linter para entrelazado (nested) */
+
   & input {
+    background-color: var(--on-surface-color);
     border: none;
-    border-bottom: 1px solid var(--borderLine);
+    border-bottom-style: solid;
+    border-radius: 3px 3px 0 0;
+    border-width: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    height: 63px;
+    height: 56px;
     outline: none;
-    padding: 38px 0 8px;
-  }
+    padding: 29px 12px 16px 12px;
 
-  &:hover input {
-    border-bottom: 2px solid var(--borderLine);
-    padding-bottom: 7px;
-  }
+    &:hover {
+      padding-top: 30px;
+      border-color: var(--primary-light-color);
+      border-width: 1px;
+    }
 
-  &:hover input:focus {
-    color: var(--primaryText)
+    &:focus {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+      border-width: 2px;
+      padding-top: 31px;
+    }
+
+    &.mm-input-error:hover,
+    &.mm-input-error:focus {
+      border-color: var(--error-color);
+    }
   }
 
   & label {
     @apply --mm-animation-standard-small-area;
 
+    color: var(--primary-color);
+    left: 12px;
     position: absolute;
-    top: 37px;
+    top: 25px;
     transform-origin: left top;
+    user-select: none;
   }
 
   & input:focus + label,
   & .mm-input-not-empty + label {
-    color: var(--colorTextFieldFocus);
-
     transform: translateY(-100%) scale(0.75);
   }
 
   & span {
     visibility: hidden;
     font-size: 12px;
-    padding-top: 8px;
+    padding: 7px 12px 0 12px;
   }
 
   & .mm-input-helper-text ~ span {
+    visibility: visible;
+  }
+
+  & .mm-input-error + label,
+  & .mm-input-error ~ span {
+    color: var(--error-color);
     visibility: visible;
   }
 }

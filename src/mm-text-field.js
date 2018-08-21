@@ -1,30 +1,42 @@
 import 'mm-animations';
 import './styles/mm-text-field.css';
 
-// TODO: pendiente al cargar el componente, validar que este diligenciada informacion
+// // Events for input text field
+// import eventBlur from './events/blur';
+// import eventChange from './events/change';
+// import eventFocus from './events/focus';
+// import eventKeyUp from './events/keyUp';
 
-const mmTextField = function textField() {
-  const eventChange = (nodeHtml) => {
-    const input = nodeHtml.children[0];
+const mmTextField = () => {
+  const self = {};
+  const prototype = Object.getPrototypeOf(self);
 
-    input.addEventListener('change', (event) => {
-      const { target: { value: valueComp } } = event;
+  // prototype.events = (input) => {
+  //   self.eventBlur(input);
+  //   self.eventChange(input);
+  //   self.eventFocus(input);
+  //   self.eventKeyUp(input);
+  // };
 
-      if (valueComp && valueComp !== '') {
-        input.classList.add('mm-input-not-empty');
-      }
-    });
-  };
-
-  const constructor = () => {
+  prototype.constructor = () => {
     const components = document.querySelectorAll('.mm-text-field');
+    self.inputs = [];
 
-    components.forEach((comp) => {
-      eventChange(comp);
+    // prototype.eventBlur = eventBlur;
+    // prototype.eventChange = eventChange;
+    // prototype.eventFocus = eventFocus;
+    // prototype.eventKeyUp = eventKeyUp;
+
+    components.forEach((comp, i) => {
+      self.inputs.push(comp);
+
+      // self.events(self.inputs[i].children[0]);
     });
   };
 
-  constructor();
+  self.constructor();
+
+  return self;
 };
 
 export default mmTextField;
